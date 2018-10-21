@@ -20,9 +20,14 @@ DNS domain names which resolve to single IP addresses should only be used for ne
 1. SSL / TLS ports should be listed first so that mIRC will connect to them in preference.
 
 1. New servers should be added to the end of the list rather than trying to insert them to maintain a consistent sort order.
-(This is to avoid needing to change the `nxxx` sequence at the start of every line which would create commits with large number
-of trivial "changes".)
+(This is to avoid needing to change the `nxxx` sequence at the start of every line 
+which would create commits with large number of trivial "changes".)
 The admins of this repo will occassionally sort the sequence as a separate commit.
+
+1. For regional Random server addresses, you should check that these actually consist only of servers in that region
+as (in the experience of the author) many regional addresses (e.g. eu.quakenet.org) are now aliases to more global lists
+that include servers in other regions. If they include servers in other regions, this regional random server entry should be dropped
+in favour of a more global one.
 
 Users will be able to download this server.ini to replace the standard one.
 If we are lucky Khaled may agree to include it in mIRC itself rather than try to maintain a version himself.
